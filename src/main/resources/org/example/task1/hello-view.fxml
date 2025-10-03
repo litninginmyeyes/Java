@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.task1.HelloController">
+
+    <top>
+        <VBox spacing="10" style="-fx-padding: 10;">
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Button fx:id="rectangleButton" text="Прямоугольник" />
+            <Button fx:id="circleButton" text="Круг" />
+            <Button fx:id="squareButton" text="Квадрат" />
+            <Button fx:id="ellipseButton" text="Эллипс" />
+            <Button text="Очистить" onAction="#clearCanvas" />
+        </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Заливка:"/>
+                <Button text="Красный" onAction="#setFillRed"/>
+                <Button text="Синий" onAction="#setFillBlue"/>
+                <Button text="Зеленый" onAction="#setFillGreen"/>
+                <Button text="Желтый" onAction="#setFillYellow"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Контур:"/>
+                <Button text="Черный" onAction="#setStrokeBlack"/>
+                <Button text="Белый" onAction="#setStrokeWhite"/>
+                <Button text="Красный" onAction="#setStrokeRed"/>
+                <Button text="Синий" onAction="#setStrokeBlue"/>
+            </HBox>
+            <Label fx:id="infoLabel" text="Информация о фигурах будет здесь"
+                   style="-fx-font-size: 10; -fx-text-fill: blue;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <Canvas fx:id="myCanvas" width="1200" height="800"
+                style="-fx-border-color: black; -fx-border-width: 1;"/>
+    </center>
+
+</BorderPane>
